@@ -15,8 +15,8 @@ const appVersion = process.env.APP_VERSION || '20251012-2333';
 const config: Config = {
   title: 'KNIFE Preview - Knowledge in Friendly Examples',   // ✅ povinné
   tagline: 'Context Aware Approach',
-  url: 'https://knifes.systemthinking.sk',                   // ✅ povinné (root URL nasadenia)
-  baseUrl: '/',                                              // ✅ povinné (prefix cesty)
+  url: process.env.SITE_URL || 'https://knifes.systemthinking.sk', // can be overridden in CI/local
+  baseUrl: process.env.BASE_URL || '/',                              // can be overridden in CI/local
   trailingSlash: false,
   favicon: 'img/favicon.ico',
 
@@ -53,7 +53,15 @@ const config: Config = {
           numberPrefixParser: false,
           editCurrentVersion: false,
           editUrl: undefined,
-          exclude: ['**/README.migrated.md', '**/README_.md', '**/_legacy/**'],
+          exclude: [
+            '**/README.migrated.md',
+            '**/README_.md',
+            '**/_legacy/**',
+            '**/templates/**',
+            '**/_templates/**',
+            '**/*.template.md',
+            '**/*index.template.md'
+          ],
           sidebarPath: require.resolve('./sidebars.ts'),
         },
         blog: false,
@@ -75,7 +83,6 @@ const config: Config = {
         redirects: [
           // Root & locale root fixes
           { from: '/',        to: '/sk' },
-          { from: '/en',      to: '/en' },
           { from: '/en/index', to: '/en' },
           { from: '/sk/index', to: '/sk' },
 
