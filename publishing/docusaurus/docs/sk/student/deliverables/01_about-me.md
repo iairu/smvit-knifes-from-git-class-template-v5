@@ -1,4 +1,5 @@
 🙋 About Me
+
 ## 🔖 Základné informácie
 - Meno a priezvisko: Ondrej Špánik
 - Študentský GitHub profil: https://github.com/iairu
