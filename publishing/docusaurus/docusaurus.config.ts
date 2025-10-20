@@ -92,12 +92,12 @@ const config: Config = {
         redirects: [
           // Root & locale root fixes
           { from: "/", to: "/sk" },
-          { from: "/en/index", to: "/en" },
-          { from: "/sk/index", to: "/sk" },
+          // { from: "/en/index", to: "/en" },
+          // { from: "/sk/index", to: "/sk" },
 
           // Backward-compatible old paths
           { from: ["/index", "/home"], to: "/sk" },
-          { from: ["/knifes", "/sk/knifes"], to: "/sk/knifes/overview" },
+          // { from: ["/knifes", "/sk/knifes"], to: "/sk/knifes/overview" },
           // { from: ['/7Ds'],                 to: '/sk/7Ds' },
         ],
         createRedirects(existingPath) {
@@ -142,7 +142,7 @@ const config: Config = {
       logo: { alt: "KNIFE Logo", src: "img/logo.png", href: "/sk" },
       items: [
         { to: "/sk", label: "Home", position: "left" },
-        { to: "/sk/knifes/overview", label: "KNIFES", position: "left" },
+        // { to: "/sk/knifes/overview", label: "KNIFES", position: "left" },
         // { to: '/sk/7Ds', label: '7Ds', position: 'left' },
         {
           href: "https://github.com/KNIFE-Framework/knifes_overview",
