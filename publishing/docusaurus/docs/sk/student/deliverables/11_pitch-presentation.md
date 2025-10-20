@@ -1,19 +1,19 @@
 ---
-id: ""
-guid: ""
+id: "11"
+guid: "11-pitch-presentation"
 dao: "knife"
 title: "🎤 Pitch Presentation"
-author: ""
+author: "Roman Kazička"
 category: "deliverable"
 type: "pitch-presentation"
-priority: ""
-tags: []
+priority: "medium"
+tags: ["pitch", "presentation", "deliverable"]
 slug: "pitch-presentation"
-created: ""
-modified: ""
+created: "2025-10-20"
+modified: "2025-10-20"
 status: "draft"
 # ⚖️ IP rights
-rights_holder_content: ""
+rights_holder_content: "Roman Kazička (CAA/KNIFE/LetItGrow)"
 rights_holder_system: "Roman Kazička (CAA/KNIFE/LetItGrow)"
 license: "CC-BY-NC-SA-4.0"
 disclaimer: "Use at your own risk. Methods provided as-is; participation is voluntary and context-aware."
