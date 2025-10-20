@@ -149,7 +149,7 @@ const config: Config = {
         { to: "/sk/knifes", label: "KNIFES", position: "left" },
         { to: "/sk/7ds/", label: "7DS", position: "left" },
         {
-          to: "/sk/student/deliverables-ondrej/",
+          to: "/sk/student/deliverables-ondrej",
           label: "STUDENT - Ondrej Špánik",
           position: "left",
         },
