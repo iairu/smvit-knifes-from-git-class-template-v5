@@ -138,11 +138,12 @@ const config: Config = {
   themeConfig: {
     image: "img/logo.png",
     navbar: {
-      title: "KNIFE-Home",
+      title: "KNIFE Home",
       logo: { alt: "KNIFE Logo", src: "img/logo.png", href: "/sk" },
       items: [
-        { to: "/sk", label: "Home", position: "left" },
-        // { to: "/sk/knifes/overview", label: "KNIFES", position: "left" },
+        { to: "/sk", label: "HOME", position: "left" },
+        { to: "/sk/knifes", label: "KNIFES", position: "left" },
+        { to: "/sk/student", label: "STUDENT", position: "left" },
         // { to: '/sk/7Ds', label: '7Ds', position: 'left' },
         {
           href: "https://github.com/KNIFE-Framework/knifes_overview",
