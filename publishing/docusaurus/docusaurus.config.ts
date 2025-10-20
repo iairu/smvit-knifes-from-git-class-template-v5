@@ -136,14 +136,22 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/logo.png",
+    image: "https://iairu.com/_global/logo.svg",
     navbar: {
-      title: "KNIFE Home",
-      logo: { alt: "KNIFE Logo", src: "img/logo.png", href: "/sk" },
+      title: "SMVIT KNIFE Framework",
+      logo: {
+        alt: "KNIFE Logo",
+        src: "https://iairu.com/_global/logo.svg",
+        href: "/sk",
+      },
       items: [
         { to: "/sk", label: "HOME", position: "left" },
         { to: "/sk/knifes", label: "KNIFES", position: "left" },
-        { to: "/sk/student", label: "STUDENT", position: "left" },
+        {
+          to: "/sk/student",
+          label: "STUDENT - Ondrej Špánik",
+          position: "left",
+        },
         // { to: '/sk/7Ds', label: '7Ds', position: 'left' },
         {
           href: "https://github.com/KNIFE-Framework/knifes_overview",

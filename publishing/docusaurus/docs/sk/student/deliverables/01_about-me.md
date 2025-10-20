@@ -1,4 +1,4 @@
-🙋 About Me
+# 🙋 About Me
 
 ## 🔖 Základné informácie
 - Meno a priezvisko: Ondrej Špánik
