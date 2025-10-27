@@ -438,18 +438,18 @@ The hardware development followed a rigorous four-iteration Design Science Resea
 - Successfully achieved 938 kb/s practical throughput using LE 2M PHY
 - Theoretical maximum: 2 Mb/s (achieved 46.9% efficiency)
 - Stable connections maintained over 10-40 meter range in workshop environment
-- Packet loss rate <0.1% under normal operating conditions
-- Connection establishment: <100ms consistently
+- Packet loss rate &lt;0.1% under normal operating conditions
+- Connection establishment: &lt;100ms consistently
 
 **Energy Efficiency:**
 - Average current consumption during transmission: 6-7 mA (LE 2M PHY)
 - Idle current (connected): 34 mA average
-- Sleep mode current: <1 mA
-- Connection establishment time: <100ms
+- Sleep mode current: &lt;1 mA
+- Connection establishment time: &lt;100ms
 - Total energy per 500KB transfer: ~27.4 mC
 
 **Wireless Terminal Performance:**
-- **Wi-Fi Mode:** WebSocket latency <50ms on local network
+- **Wi-Fi Mode:** WebSocket latency &lt;50ms on local network
 - **Bluetooth SPP Mode:** Comparable performance to wired serial connection
 - **Range:** Reliable operation 10-20 meters indoor, up to 40 meters line-of-sight
 - **Concurrent Connections:** Successfully tested with 3 simultaneous web clients
@@ -472,10 +472,10 @@ Our measurements compared BLE performance against Bluetooth Classic (BR/EDR) usi
 | Throughput | 938 kb/s | 1,047 kb/s | BR/EDR |
 | Avg. Current (Active) | 6.35-6.82 mA | 4.83-4.90 mA | BR/EDR |
 | Energy per 500KB | 27.4 mC | 18.9 mC | BR/EDR |
-| Connection Setup | <100ms | >500ms | **BLE** |
+| Connection Setup | &lt;100ms | &rt;500ms | **BLE** |
 | Idle Current | 34 mA | 35.15 mA | **BLE** |
-| Sleep Current | <1 mA | ~5-10 mA | **BLE** |
-| Connection Cycle | 3ms | >200ms | **BLE** |
+| Sleep Current | &lt;1 mA | ~5-10 mA | **BLE** |
+| Connection Cycle | 3ms | &rt;200ms | **BLE** |
 | Security | 128-bit AES | 128-bit AES | Equal |
 
 **Testing Parameters:**
@@ -488,7 +488,7 @@ Our measurements compared BLE performance against Bluetooth Classic (BR/EDR) usi
 
 1. **Continuous Transmission:** Bluetooth Classic shows 24% lower energy consumption during active data transfer
 2. **Intermittent Communication:** BLE's rapid connection/disconnection (3ms vs 200ms+ cycles) provides superior efficiency for typical serial terminal use cases
-3. **Sleep Efficiency:** BLE's <1mA sleep mode significantly outperforms BR/EDR for battery-powered applications
+3. **Sleep Efficiency:** BLE's &lt;1mA sleep mode significantly outperforms BR/EDR for battery-powered applications
 4. **Overall Verdict:** BLE optimal for USB-TTL converter application due to burst communication patterns and sleep state advantages
 
 **Comparison to Traditional USB-TTL Converters:**
@@ -501,7 +501,7 @@ Our measurements compared BLE performance against Bluetooth Classic (BR/EDR) usi
 | Wireless Access | Yes (10-40m) | No | **Ours** |
 | Setup Complexity | Plug & detect | Requires configuration | **Ours** |
 | Maximum Baud Rate | 115200 (auto) | Up to 3Mbps | Standard |
-| Latency | ~50-100ms | <1ms | Standard |
+| Latency | ~50-100ms | &lt;1ms | Standard |
 | Power Consumption | 6-7mA + MCU | ~15-20mA | Similar |
 
 ### Real-World Application
@@ -566,7 +566,7 @@ The USB-TTL converter successfully demonstrated practical utility across multipl
    - **Challenge:** Maintaining real-time bidirectional data flow between web interface and serial device
    - **Buffer Management:** Preventing data loss during high-throughput serial communication
    - **Solution:** Implemented efficient buffering with flow control and configurable buffer sizes
-   - **Performance:** Achieved <50ms latency for typical terminal operations
+   - **Performance:** Achieved &lt;50ms latency for typical terminal operations
 
 5. **Throughput Optimization**
    - **Challenge:** Initial BLE throughput significantly below theoretical maximum (2 Mb/s)
@@ -768,7 +768,7 @@ This project successfully demonstrates an innovative multi-functional solution t
 - **BLE Protection:** Achieved complete electrical isolation providing 100% protection against USB Killer attacks through wireless communication architecture
 - **Wireless Terminal:** Developed functional Wi-Fi Access Point with WebSocket-based web terminal and Bluetooth SPP support for mobile access
 - **Energy Efficiency Research:** Conducted comprehensive comparative analysis of BLE vs Bluetooth Classic using Design Science Research methodology with 100nA measurement resolution
-- **Performance Validation:** Achieved 938 kb/s practical BLE throughput with <0.1% packet loss and <100ms connection establishment
+- **Performance Validation:** Achieved 938 kb/s practical BLE throughput with &lt;0.1% packet loss and &lt;100ms connection establishment
 - **Team Collaboration:** Successfully executed as three-person team (Denis Ivan, Ondrej Špánik, Danilo Bashmakov) in workshop environment during academic studies
 
 **Solving Real Problems:**
@@ -796,11 +796,11 @@ The project demonstrates that seemingly opposing goals—ease of use, security, 
 
 This case study contributes valuable findings to multiple domains:
 
-1. **BLE Energy Research:** Detailed comparative analysis revealing that while Bluetooth Classic shows 24% better efficiency during continuous transmission, BLE's rapid connection/disconnection and superior sleep modes (<1mA vs 5-10mA) provide overall better efficiency for intermittent serial communication patterns
+1. **BLE Energy Research:** Detailed comparative analysis revealing that while Bluetooth Classic shows 24% better efficiency during continuous transmission, BLE's rapid connection/disconnection and superior sleep modes (&lt;1mA vs 5-10mA) provide overall better efficiency for intermittent serial communication patterns
 
 2. **Measurement Methodology:** Documented four-iteration Design Science Research process showing progression from basic ampere meter (burden voltage issues) → current probe (noise problems) → PPK2 integration → final optimized configuration with 100nA resolution
 
-3. **Practical Implementation:** Demonstrated ESP32 GPIO matrix manipulation for runtime UART pin swapping, WebSocket bidirectional communication with <50ms latency, and automotive-grade component integration (Jody-W263 module)
+3. **Practical Implementation:** Demonstrated ESP32 GPIO matrix manipulation for runtime UART pin swapping, WebSocket bidirectional communication with &lt;50ms latency, and automotive-grade component integration (Jody-W263 module)
 
 4. **Security Architecture:** Validated that defense-in-depth through physical isolation (wireless) + encryption (128-bit AES) + authentication (BLE pairing) provides superior protection to surge suppression approaches
 

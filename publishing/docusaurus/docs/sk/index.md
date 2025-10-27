@@ -49,7 +49,7 @@ Cieľom tohto projektu je navrhnúť a zostrojiť pokročilý USB-TTL sériový 
 
 ```
 +-------------------+ +-----------------+ +---------------------+
-PC (USB) <=>| USB-to-UART čip | UART1<=>| ESP32 | UART2<=>| Cieľové Zariadenie |
+PC (USB) &lt;=&rt;| USB-to-UART čip | UART1&lt;=&rt;| ESP32 | UART2&lt;=&rt;| Cieľové Zariadenie |
 | (CP2102/CH340) | | | | (Arduino, senzor...) |
 +-------------------+ +-------+---------+ +---------------------+
 |

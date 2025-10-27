@@ -85,7 +85,7 @@ Yes... during continuous transmission. But here's the twist:
 
 → BLE connection cycle: 3ms
 → Classic connection cycle: 200ms+
-→ BLE sleep mode: <1 mA
+→ BLE sleep mode: &lt;1 mA
 → Classic sleep mode: 5-10 mA
 
 For serial communication (burst data, then idle), BLE wins decisively.
@@ -151,7 +151,7 @@ No configuration.
 
 Our converter creates a Wi-Fi access point and web server. Connect your phone, laptop, or tablet, open the browser, and you've got a full serial terminal.
 
-WebSocket implementation: <50ms latency
+WebSocket implementation: &lt;50ms latency
 Range: 10-40 meters
 Simultaneous connections: Up to 3 clients tested
 
