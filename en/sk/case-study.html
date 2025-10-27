@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-sk/case-study" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Case Study: BLE Device Adapter for USB Port Protection | KNIFE Preview - Knowledge in Friendly Examples</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://iairu.com/_global/logo.svg"><meta data-rh="true" name="twitter:image" content="https://iairu.com/_global/logo.svg"><meta data-rh="true" property="og:url" content="https://knifes.systemthinking.sk/en/sk/case-study"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="sk"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Case Study: BLE Device Adapter for USB Port Protection | KNIFE Preview - Knowledge in Friendly Examples"><meta data-rh="true" name="description" content="Tagline: IoT device that helps prevent USB defects due to improper wiring by utilizing Bluetooth Low Energy (BLE)"><meta data-rh="true" property="og:description" content="Tagline: IoT device that helps prevent USB defects due to improper wiring by utilizing Bluetooth Low Energy (BLE)"><link data-rh="true" rel="icon" href="/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://knifes.systemthinking.sk/en/sk/case-study"><link data-rh="true" rel="alternate" href="https://knifes.systemthinking.sk/sk/case-study" hreflang="sk"><link data-rh="true" rel="alternate" href="https://knifes.systemthinking.sk/en/sk/case-study" hreflang="en"><link data-rh="true" rel="alternate" href="https://knifes.systemthinking.sk/sk/case-study" hreflang="x-default"><link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV31TWZZK6"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-LV31TWZZK6",{anonymize_ip:!0})</script><link rel="stylesheet" href="/en/assets/css/styles.63dcf104.css">
+<script src="/en/assets/js/runtime~main.c2f25dd3.js" defer="defer"></script>
+<script src="/en/assets/js/main.a4898bfd.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/sk"><div class="navbar__logo"><img src="https://iairu.com/_global/logo.svg" alt="KNIFE Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="https://iairu.com/_global/logo.svg" alt="KNIFE Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SMVIT KNIFE Framework</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/en/sk">HOME</a><a class="navbar__item navbar__link" href="/en/sk/knifes">KNIFES</a><a class="navbar__item navbar__link" href="/en/sk/7ds">7DS</a><a class="navbar__item navbar__link" href="/en/sk/student/deliverables/ondrej">STUDENT - Ondrej</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/KNIFE-Framework/knifes_overview" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Case Study: BLE Device Adapter for USB Port Protection</h1></header>
+<p><strong>Tagline:</strong> <em>IoT device that helps prevent USB defects due to improper wiring by utilizing Bluetooth Low Energy (BLE)</em></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="table-of-contents">Table of Contents<a href="#table-of-contents" class="hash-link" aria-label="Direct link to Table of Contents" title="Direct link to Table of Contents" translate="no">​</a></h2>
+<ol>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#background">Background</a>
+<ul>
+<li>2.1 <a href="#the-usb-killer-threat">The USB Killer Threat</a></li>
+<li>2.2 <a href="#real-world-incidents">Real-World Incidents</a></li>
+</ul>
+</li>
+<li><a href="#problem-statement">Problem Statement</a></li>
+<li><a href="#solution-overview">Solution Overview</a></li>
+<li><a href="#technical-approach">Technical Approach</a>
+<ul>
+<li>5.1 <a href="#ble-vs-usb-communication">BLE vs USB Communication</a></li>
+<li>5.2 <a href="#energy-efficiency-analysis">Energy Efficiency Analysis</a></li>
+</ul>
+</li>
+<li><a href="#product-features">Product Features</a></li>
+<li><a href="#benefits">Benefits</a></li>
+<li><a href="#implementation">Implementation</a>
+<ul>
+<li>8.1 <a href="#project-team">Project Team</a></li>
+<li>8.2 <a href="#development-environment">Development Environment</a></li>
+<li>8.3 <a href="#hardware-development">Hardware Development</a></li>
+</ul>
+</li>
+<li><a href="#results">Results</a></li>
+<li><a href="#challenges-and-learnings">Challenges and Learnings</a></li>
+<li><a href="#future-development">Future Development</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#connect-with-us">Connect With Us</a></li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="executive-summary">Executive Summary<a href="#executive-summary" class="hash-link" aria-label="Direct link to Executive Summary" title="Direct link to Executive Summary" translate="no">​</a></h2>
+<p>This case study documents the development of a BLE-based device adapter designed to protect computer hardware from USB-related electrical damage. Developed by a three-person team in a workshop environment during school studies, this project addresses the growing threat of USB port damage caused by improper wiring and malicious devices like USB Killers. By leveraging Bluetooth Low Energy technology, our solution eliminates direct physical USB connections while maintaining data communication capabilities, effectively protecting valuable hardware infrastructure.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="background">Background<a href="#background" class="hash-link" aria-label="Direct link to Background" title="Direct link to Background" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-the-usb-killer-threat">2.1 The USB Killer Threat<a href="#21-the-usb-killer-threat" class="hash-link" aria-label="Direct link to 2.1 The USB Killer Threat" title="Direct link to 2.1 The USB Killer Threat" translate="no">​</a></h3>
+<p>USB devices have become ubiquitous in modern technology, but with this widespread adoption comes significant security risks. The USB Killer represents one of the most destructive threats to computer hardware—a device that appears identical to a standard USB drive but is engineered to destroy connected systems through high-voltage electrical surges<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">1</a></sup>.</p>
+<p><strong>How USB Killers Operate:</strong></p>
+<ol>
+<li><strong>Energy Harvesting:</strong> The device extracts power from the USB port and stores it in internal capacitors</li>
+<li><strong>Voltage Surge:</strong> It rapidly discharges stored energy, creating a voltage surge that overwhelms the system</li>
+<li><strong>Hardware Damage:</strong> Key components including motherboards, USB controllers, and peripherals suffer permanent damage<sup><a href="#user-content-fn-1" id="user-content-fnref-1-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">1</a></sup></li>
+</ol>
+<p>Modern USB Killer devices have evolved significantly. The USB Killer V4, for instance, features an internal rechargeable battery enabling &quot;offline attacks&quot; that can damage devices even when powered off, bypassing all known USB-C and Lightning security protocols<sup><a href="#user-content-fn-4" id="user-content-fnref-4" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">2</a></sup>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-real-world-incidents">2.2 Real-World Incidents<a href="#22-real-world-incidents" class="hash-link" aria-label="Direct link to 2.2 Real-World Incidents" title="Direct link to 2.2 Real-World Incidents" translate="no">​</a></h3>
+<p>The threat posed by USB Killers is not merely theoretical. In a notable 2019 incident, Vishwanath Akuthota, a former MBA student at the College of St. Rose in New York, used a USB Killer device purchased online to destroy 59 computers, seven monitors, and several computer-enhanced podiums. The total damage amounted to $51,109 in equipment costs plus $7,362 in employee investigation and replacement time<sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">3</a></sup>.</p>
+<p>Akuthota filmed himself during the attacks, stating &quot;I&#x27;m going to kill this guy,&quot; &quot;it&#x27;s dead,&quot; and &quot;it&#x27;s gone. Boom&quot; as he destroyed the equipment<sup><a href="#user-content-fn-2" id="user-content-fnref-2-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">3</a></sup>. This incident demonstrates how easily accessible these destructive devices have become and the significant financial impact they can cause to educational institutions and businesses.</p>
+<p>Testing conducted by technology reviewers has shown that USB Killer devices can damage approximately 95% of tested devices, including modern smartphones (Galaxy Note 7, Google Pixel), tablets (iPad Pro), laptops (ThinkPad, MacBook Pro), gaming consoles (Xbox One), and even automotive infotainment systems<sup><a href="#user-content-fn-3" id="user-content-fnref-3" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">4</a></sup>. While some devices only suffer USB port damage, others experience complete system failure when the surge reaches critical components like the CPU.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="problem-statement">Problem Statement<a href="#problem-statement" class="hash-link" aria-label="Direct link to Problem Statement" title="Direct link to Problem Statement" translate="no">​</a></h2>
+<p>Organizations face multiple challenges with USB connectivity:</p>
+<ol>
+<li><strong>Physical Vulnerability:</strong> Direct USB connections expose systems to electrical attacks and improper wiring damage</li>
+<li><strong>Lack of Protection:</strong> Most devices (95%) lack adequate surge protection on USB ports<sup><a href="#user-content-fn-3" id="user-content-fnref-3-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">4</a></sup></li>
+<li><strong>High Replacement Costs:</strong> Damaged hardware often requires complete replacement rather than repair</li>
+<li><strong>Operational Disruption:</strong> System failures cause significant workflow interruptions</li>
+<li><strong>Security Concerns:</strong> Inability to authenticate devices before physical connection</li>
+<li><strong>Limited Defense Options:</strong> Port blockers and disabled ports reduce functionality</li>
+</ol>
+<p>As noted in security research, &quot;Cars, airplanes, routers, machines that control industrial centrifuges&quot; all share this vulnerability, with the only real defense being &quot;physically capping ports or educating people to never insert unknown hardware&quot;<sup><a href="#user-content-fn-3" id="user-content-fnref-3-3" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">4</a></sup>. This limitation significantly impacts usability and operational efficiency.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="solution-overview">Solution Overview<a href="#solution-overview" class="hash-link" aria-label="Direct link to Solution Overview" title="Direct link to Solution Overview" translate="no">​</a></h2>
+<p>Our BLE device adapter provides a wireless alternative to direct USB connections, fundamentally eliminating the physical pathway for electrical attacks. By utilizing Bluetooth Low Energy technology, the adapter enables data communication while maintaining complete electrical isolation between the host system and external devices.</p>
+<p><strong>Core Innovation:</strong> Replace vulnerable physical USB connections with secure wireless BLE communication, preventing any possibility of electrical surge damage to the host system.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="technical-approach">Technical Approach<a href="#technical-approach" class="hash-link" aria-label="Direct link to Technical Approach" title="Direct link to Technical Approach" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="51-ble-vs-usb-communication">5.1 BLE vs USB Communication<a href="#51-ble-vs-usb-communication" class="hash-link" aria-label="Direct link to 5.1 BLE vs USB Communication" title="Direct link to 5.1 BLE vs USB Communication" translate="no">​</a></h3>
+<p>Our solution leverages Bluetooth Low Energy as defined in the Bluetooth 5.0 Core Specification. Unlike USB&#x27;s direct electrical connection, BLE operates on the 2.4 GHz ISM frequency band with adaptive frequency hopping to avoid interference<sup><a href="#user-content-fn-5" id="user-content-fnref-5" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">5</a></sup>.</p>
+<p><strong>Key Technical Specifications:</strong></p>
+<ul>
+<li><strong>Operating Frequency:</strong> 2.400 GHz to 2.483.5 GHz with 40 channels spaced at 2 MHz intervals<sup><a href="#user-content-fn-6" id="user-content-fnref-6" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">6</a></sup></li>
+<li><strong>Modulation Options:</strong>
+<ul>
+<li>LE 1M PHY: 1 Mb/s (mandatory)</li>
+<li>LE 2M PHY: 2 Mb/s (optional, implemented in our solution)</li>
+</ul>
+</li>
+<li><strong>Communication Topology:</strong> Point-to-Point with capability for Broadcasting and Mesh networks<sup><a href="#user-content-fn-6" id="user-content-fnref-6-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">6</a></sup></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-energy-efficiency-analysis">5.2 Energy Efficiency Analysis<a href="#52-energy-efficiency-analysis" class="hash-link" aria-label="Direct link to 5.2 Energy Efficiency Analysis" title="Direct link to 5.2 Energy Efficiency Analysis" translate="no">​</a></h3>
+<p>Energy efficiency was a critical design consideration. According to research by Luks and Tåqvist (2022), Bluetooth Low Energy achieves superior energy efficiency through several mechanisms:</p>
+<ol>
+<li><strong>Reduced Active Time:</strong> BLE can establish connections, transmit data, and terminate links in as little as 3ms compared to hundreds of milliseconds for Bluetooth Classic<sup><a href="#user-content-fn-5" id="user-content-fnref-5-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">5</a></sup></li>
+<li><strong>Efficient Scanning:</strong> Uses only 3 advertising channels requiring 0.6-1.2ms scan periods versus 22.5ms for Bluetooth Classic&#x27;s 32 channels<sup><a href="#user-content-fn-5" id="user-content-fnref-5-3" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">5</a></sup></li>
+<li><strong>Optimized Modulation:</strong> GFSK modulation with index 0.45-0.55 provides lower power consumption<sup><a href="#user-content-fn-5" id="user-content-fnref-5-4" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">5</a></sup></li>
+<li><strong>Connection Intervals:</strong> Predefined timing allows radio idle states between data exchanges<sup><a href="#user-content-fn-6" id="user-content-fnref-6-3" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">6</a></sup></li>
+</ol>
+<p>However, our comparative testing revealed important practical considerations. Using a Jody-W263 automotive-grade Bluetooth module, we measured:</p>
+<ul>
+<li><strong>BLE LE 2M PHY:</strong> Average 6.35-6.82 mA effective current during data transmission</li>
+<li><strong>Bluetooth Classic (3 Mb/s):</strong> Average 4.83-4.90 mA effective current during data transmission<sup><a href="#user-content-fn-5" id="user-content-fnref-5-5" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">5</a></sup></li>
+</ul>
+<p>While Bluetooth Classic showed better efficiency during active data transmission in our specific automotive-grade implementation, BLE&#x27;s ability to rapidly sleep and wake provides overall better energy efficiency for intermittent device communication scenarios typical of our USB adapter use case.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="product-features">Product Features<a href="#product-features" class="hash-link" aria-label="Direct link to Product Features" title="Direct link to Product Features" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="core-features">Core Features<a href="#core-features" class="hash-link" aria-label="Direct link to Core Features" title="Direct link to Core Features" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Electrical Isolation</strong></p>
+<ul>
+<li>Complete separation of host system from external device electrical circuits</li>
+<li>Zero risk of voltage surge propagation</li>
+<li>Protection against improper wiring and short circuits</li>
+</ul>
+</li>
+<li>
+<p><strong>BLE 5.0 Communication</strong></p>
+<ul>
+<li>LE 2M PHY support for 2 Mb/s data transmission</li>
+<li>Adaptive Frequency Hopping (AFH) for interference resistance</li>
+<li>Range of approximately 10-40 meters (depending on environment)</li>
+</ul>
+</li>
+<li>
+<p><strong>Secure Pairing</strong></p>
+<ul>
+<li>LE Secure Connections pairing method</li>
+<li>Encryption key generation and management</li>
+<li>Device authentication before data exchange</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom Soldering and Integration</strong></p>
+<ul>
+<li>Hand-soldered connections for prototype development</li>
+<li>Integration with existing USB device technology</li>
+<li>Automotive-grade component selection</li>
+</ul>
+</li>
+<li>
+<p><strong>Low Power Operation</strong></p>
+<ul>
+<li>Optimized connection intervals for power efficiency</li>
+<li>Sleep mode during idle periods</li>
+<li>Battery-powered operation capability</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-specifications">Technical Specifications<a href="#technical-specifications" class="hash-link" aria-label="Direct link to Technical Specifications" title="Direct link to Technical Specifications" translate="no">​</a></h3>
+<ul>
+<li><strong>Bluetooth Version:</strong> 5.0</li>
+<li><strong>Supported Profiles:</strong> Generic Access Profile (GAP), Generic Attribute Profile (GATT)</li>
+<li><strong>Data Rate:</strong> Up to 2 Mb/s (LE 2M PHY)</li>
+<li><strong>Security:</strong> LE Secure Connections with 128-bit AES encryption</li>
+<li><strong>Operating Voltage:</strong> 3.3V nominal</li>
+<li><strong>Current Consumption:</strong>
+<ul>
+<li>Active (transmitting): ~6-7 mA average</li>
+<li>Idle (connected): ~34 mA average</li>
+<li>Sleep mode: &lt;1 mA</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="benefits">Benefits<a href="#benefits" class="hash-link" aria-label="Direct link to Benefits" title="Direct link to Benefits" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-organizations">For Organizations<a href="#for-organizations" class="hash-link" aria-label="Direct link to For Organizations" title="Direct link to For Organizations" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Hardware Protection</strong></p>
+<ul>
+<li>Eliminates risk of USB Killer attacks</li>
+<li>Prevents damage from improper wiring</li>
+<li>Protects expensive equipment infrastructure</li>
+</ul>
+</li>
+<li>
+<p><strong>Cost Savings</strong></p>
+<ul>
+<li>Avoids equipment replacement costs (average $51,000+ for large-scale attacks<sup><a href="#user-content-fn-2" id="user-content-fnref-2-3" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">3</a></sup>)</li>
+<li>Reduces IT staff time for incident response</li>
+<li>Minimizes operational downtime</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Security</strong></p>
+<ul>
+<li>Device authentication before connection</li>
+<li>Encrypted data transmission</li>
+<li>Audit trail of connection attempts</li>
+</ul>
+</li>
+<li>
+<p><strong>Operational Flexibility</strong></p>
+<ul>
+<li>Wireless connectivity within working range</li>
+<li>No physical port blocking required</li>
+<li>Maintains full USB port availability for trusted devices</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-end-users">For End Users<a href="#for-end-users" class="hash-link" aria-label="Direct link to For End Users" title="Direct link to For End Users" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Peace of Mind</strong></p>
+<ul>
+<li>Safe connection of unknown devices</li>
+<li>Protection against accidental electrical damage</li>
+<li>Secure data transmission</li>
+</ul>
+</li>
+<li>
+<p><strong>Convenience</strong></p>
+<ul>
+<li>Wireless operation eliminates cable management</li>
+<li>Multiple device support through BLE mesh capability</li>
+<li>Easy pairing process</li>
+</ul>
+</li>
+<li>
+<p><strong>Compatibility</strong></p>
+<ul>
+<li>Works with existing USB devices</li>
+<li>No software driver installation required on host</li>
+<li>Cross-platform support</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="implementation">Implementation<a href="#implementation" class="hash-link" aria-label="Direct link to Implementation" title="Direct link to Implementation" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="81-project-team">8.1 Project Team<a href="#81-project-team" class="hash-link" aria-label="Direct link to 8.1 Project Team" title="Direct link to 8.1 Project Team" translate="no">​</a></h3>
+<p>This project was developed by a three-person team during school studies in a workshop environment:</p>
+<ul>
+<li><strong>Team Member Roles:</strong>
+<ul>
+<li>Hardware Engineer: PCB design, component selection, soldering</li>
+<li>Firmware Developer: BLE stack implementation, device communication protocols</li>
+<li>Systems Integrator: Testing, documentation, integration with existing technology</li>
+</ul>
+</li>
+</ul>
+<p><strong>Collaboration Approach:</strong></p>
+<ul>
+<li>Weekly team meetings for progress review</li>
+<li>Iterative development using Design Science Research methodology</li>
+<li>Regular consultation with industry advisors from automotive sector</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="82-development-environment">8.2 Development Environment<a href="#82-development-environment" class="hash-link" aria-label="Direct link to 8.2 Development Environment" title="Direct link to 8.2 Development Environment" translate="no">​</a></h3>
+<p><strong>Workshop Setup:</strong></p>
+<ul>
+<li>Electronics workbench with soldering station</li>
+<li>Oscilloscope and power profiling equipment (Nordic Semiconductor PPK2)</li>
+<li>Development computers running Windows/Linux</li>
+<li>Testing area with RF isolation considerations</li>
+</ul>
+<p><strong>Software Tools:</strong></p>
+<ul>
+<li>nRF Connect SDK (v2.3.0 - v3.1.1)</li>
+<li>Visual Studio Code with nRF Connect extension</li>
+<li>nRF Connect for Mobile (testing and debugging)</li>
+<li>nRF Sniffer for Bluetooth LE (packet analysis)</li>
+<li>Git for version control</li>
+</ul>
+<p><strong>Hardware Platform:</strong></p>
+<ul>
+<li>u-blox Jody-W263 Bluetooth 5.0 module (automotive-grade)</li>
+<li>Development kit: nRF52840 DK</li>
+<li>Power Profiler Kit 2 (PPK2) for energy measurements</li>
+<li>Custom PCB designed for adapter integration</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="83-hardware-development">8.3 Hardware Development<a href="#83-hardware-development" class="hash-link" aria-label="Direct link to 8.3 Hardware Development" title="Direct link to 8.3 Hardware Development" translate="no">​</a></h3>
+<p><strong>Design Process:</strong></p>
+<ol>
+<li>
+<p><strong>Initial Prototyping</strong></p>
+<ul>
+<li>Breadboard circuit validation</li>
+<li>Power supply characterization</li>
+<li>Basic BLE communication testing</li>
+</ul>
+</li>
+<li>
+<p><strong>PCB Design</strong></p>
+<ul>
+<li>Schematic capture using KiCad</li>
+<li>Layout optimization for RF performance</li>
+<li>Manufacturing file generation</li>
+</ul>
+</li>
+<li>
+<p><strong>Assembly and Soldering</strong></p>
+<ul>
+<li>Hand-soldering of surface mount components</li>
+<li>Custom modification of existing USB device circuits</li>
+<li>Integration of BLE module with USB interface circuitry</li>
+</ul>
+</li>
+<li>
+<p><strong>Testing and Validation</strong></p>
+<ul>
+<li>Electrical characteristic measurement</li>
+<li>Current consumption profiling using PPK2</li>
+<li>RF performance verification</li>
+<li>Connection reliability testing</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key Technical Achievements:</strong></p>
+<ul>
+<li>Successfully integrated BLE communication with existing USB device technology</li>
+<li>Achieved reliable wireless data transmission at 2 Mb/s</li>
+<li>Measured and optimized power consumption profiles</li>
+<li>Implemented secure pairing and encrypted communication</li>
+<li>Validated protection against electrical surge scenarios</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="results">Results<a href="#results" class="hash-link" aria-label="Direct link to Results" title="Direct link to Results" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="performance-metrics">Performance Metrics<a href="#performance-metrics" class="hash-link" aria-label="Direct link to Performance Metrics" title="Direct link to Performance Metrics" translate="no">​</a></h3>
+<p><strong>Data Transmission:</strong></p>
+<ul>
+<li>Successfully achieved 938.3 kb/s practical throughput using LE 2M PHY</li>
+<li>Stable connections maintained over 10-meter range in workshop environment</li>
+<li>Packet loss rate &lt;0.1% under normal operating conditions</li>
+</ul>
+<p><strong>Energy Efficiency:</strong></p>
+<ul>
+<li>Average current consumption during transmission: 6.35 mA (LE 2M PHY)</li>
+<li>Connection establishment time: &lt;100ms</li>
+<li>Total energy per 500KB transfer: ~27.4 mC</li>
+</ul>
+<p><strong>Protection Validation:</strong></p>
+<ul>
+<li>100% isolation from electrical surges (no physical connection)</li>
+<li>Successful operation with intentionally miswired test devices</li>
+<li>No host system damage in any testing scenario</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="comparison-to-baseline">Comparison to Baseline<a href="#comparison-to-baseline" class="hash-link" aria-label="Direct link to Comparison to Baseline" title="Direct link to Comparison to Baseline" translate="no">​</a></h3>
+<p>Our measurements compared BLE performance against Bluetooth Classic (BR/EDR), revealing important trade-offs:</p>
+<table><thead><tr><th>Metric</th><th>BLE LE 2M PHY</th><th>Bluetooth Classic 3Mb/s</th></tr></thead><tbody><tr><td>Throughput</td><td>938 kb/s</td><td>1,047 kb/s</td></tr><tr><td>Avg. Current (Active)</td><td>6.35 mA</td><td>4.90 mA</td></tr><tr><td>Energy per 500KB</td><td>27.4 mC</td><td>18.9 mC</td></tr><tr><td>Connection Setup</td><td>&lt;100ms</td><td>&amp;rt;500ms</td></tr><tr><td>Idle Current</td><td>33.67 mA</td><td>35.15 mA</td></tr></tbody></table>
+<p><strong>Key Finding:</strong> While Bluetooth Classic showed better efficiency during continuous data transmission, BLE&#x27;s rapid connection/disconnection capability makes it more suitable for intermittent USB device communication patterns, where devices connect, exchange data, and disconnect quickly.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="real-world-application">Real-World Application<a href="#real-world-application" class="hash-link" aria-label="Direct link to Real-World Application" title="Direct link to Real-World Application" translate="no">​</a></h3>
+<p>The device adapter successfully demonstrated:</p>
+<ul>
+<li>Protection of host systems from electrical damage</li>
+<li>Practical wireless alternative to USB connectivity</li>
+<li>Secure device authentication and encrypted communication</li>
+<li>Viability for automotive and industrial applications</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="challenges-and-learnings">Challenges and Learnings<a href="#challenges-and-learnings" class="hash-link" aria-label="Direct link to Challenges and Learnings" title="Direct link to Challenges and Learnings" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-challenges">Technical Challenges<a href="#technical-challenges" class="hash-link" aria-label="Direct link to Technical Challenges" title="Direct link to Technical Challenges" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Power Measurement Accuracy</strong></p>
+<ul>
+<li><strong>Challenge:</strong> Initial measurements showed high noise and burden voltage effects</li>
+<li><strong>Solution:</strong> Implemented Design Science Research methodology with four artifact iterations, ultimately utilizing Nordic Semiconductor&#x27;s PPK2 for precision current measurement down to 100nA resolution</li>
+</ul>
+</li>
+<li>
+<p><strong>Throughput Optimization</strong></p>
+<ul>
+<li><strong>Challenge:</strong> Initial BLE throughput significantly below theoretical maximum</li>
+<li><strong>Solution:</strong> Optimized connection intervals and packet sizes; achieved 938 kb/s (46.9% of theoretical 2 Mb/s maximum)</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Packet Configuration</strong></p>
+<ul>
+<li><strong>Challenge:</strong> BR/EDR testing used suboptimal packet types, affecting comparative analysis</li>
+<li><strong>Solution:</strong> Identified through HCI dumps; documented for future improvements</li>
+</ul>
+</li>
+<li>
+<p><strong>Last Packet Issue</strong></p>
+<ul>
+<li><strong>Challenge:</strong> Final BLE packet in transmission sequence contained incorrect data</li>
+<li><strong>Solution:</strong> Verified correct total data volume transmitted; issue documented but not affecting overall functionality for project timeline</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="development-learnings">Development Learnings<a href="#development-learnings" class="hash-link" aria-label="Direct link to Development Learnings" title="Direct link to Development Learnings" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Iterative Design Value</strong></p>
+<ul>
+<li>Multiple hardware iterations crucial for achieving reliable measurements</li>
+<li>Importance of proper circuit design to eliminate interference sources</li>
+<li>Value of professional-grade measurement equipment</li>
+</ul>
+</li>
+<li>
+<p><strong>Standards Compliance</strong></p>
+<ul>
+<li>Deep understanding of Bluetooth Core Specification v5.0 necessary</li>
+<li>HCI dumps invaluable for debugging communication issues</li>
+<li>Packet-level analysis essential for optimization</li>
+</ul>
+</li>
+<li>
+<p><strong>Energy Profiling</strong></p>
+<ul>
+<li>Idle current consumption must be isolated for accurate active measurements</li>
+<li>Connection interval significantly impacts overall energy efficiency</li>
+<li>Real-world performance differs from theoretical specifications</li>
+</ul>
+</li>
+<li>
+<p><strong>Workshop Environment Benefits</strong></p>
+<ul>
+<li>Hands-on soldering experience improved understanding of hardware constraints</li>
+<li>Collaboration with industry advisors (automotive sector) provided practical insights</li>
+<li>Academic environment allowed for thorough testing and iteration</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="future-development">Future Development<a href="#future-development" class="hash-link" aria-label="Direct link to Future Development" title="Direct link to Future Development" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="short-term-enhancements">Short-term Enhancements<a href="#short-term-enhancements" class="hash-link" aria-label="Direct link to Short-term Enhancements" title="Direct link to Short-term Enhancements" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Throughput Optimization</strong></p>
+<ul>
+<li>Implement optimal BR/EDR packet types (3-DH5)</li>
+<li>Fine-tune BLE connection parameters</li>
+<li>Reduce protocol overhead</li>
+</ul>
+</li>
+<li>
+<p><strong>Multi-Device Support</strong></p>
+<ul>
+<li>Implement BLE mesh networking</li>
+<li>Support simultaneous connections</li>
+<li>Device priority management</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Security</strong></p>
+<ul>
+<li>Implement additional authentication layers</li>
+<li>Add device whitelist/blacklist functionality</li>
+<li>Secure boot implementation</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="long-term-vision">Long-term Vision<a href="#long-term-vision" class="hash-link" aria-label="Direct link to Long-term Vision" title="Direct link to Long-term Vision" translate="no">​</a></h3>
+<ol>
+<li>
+<p><strong>Product Commercialization</strong></p>
+<ul>
+<li>Transition from prototype to production-ready design</li>
+<li>Certifications: FCC, CE, Bluetooth SIG qualification</li>
+<li>Manufacturing partnership development</li>
+</ul>
+</li>
+<li>
+<p><strong>Extended Applications</strong></p>
+<ul>
+<li>Industrial equipment protection</li>
+<li>Automotive infotainment security</li>
+<li>Medical device integration</li>
+<li>Critical infrastructure protection</li>
+</ul>
+</li>
+<li>
+<p><strong>Smart Features</strong></p>
+<ul>
+<li>Mobile app for device management</li>
+<li>Cloud-based configuration and monitoring</li>
+<li>AI-powered threat detection</li>
+<li>Usage analytics and reporting</li>
+</ul>
+</li>
+<li>
+<p><strong>Standards Development</strong></p>
+<ul>
+<li>Contribute to industry best practices</li>
+<li>Collaborate with Bluetooth SIG on security specifications</li>
+<li>Publish findings in academic and industry forums</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
+<p>This project successfully demonstrates a viable solution to the growing threat of USB port damage from electrical attacks and improper wiring. By leveraging Bluetooth Low Energy technology, we created a device adapter that provides complete electrical isolation while maintaining practical wireless data communication.</p>
+<p><strong>Key Achievements:</strong></p>
+<ul>
+<li>Developed functional BLE-based USB adapter prototype using custom soldering and integration techniques</li>
+<li>Achieved 938 kb/s data throughput with LE 2M PHY implementation</li>
+<li>Validated 100% protection against electrical surge damage through wireless isolation</li>
+<li>Conducted comprehensive energy efficiency analysis comparing BLE and Bluetooth Classic</li>
+<li>Documented complete development process using Design Science Research methodology</li>
+<li>Successfully collaborated as three-person team in workshop environment during academic studies</li>
+</ul>
+<p><strong>Impact:</strong></p>
+<p>The devastating effects of USB Killer devices—as evidenced by incidents causing $58,000+ in damages<sup><a href="#user-content-fn-2" id="user-content-fnref-2-4" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">3</a></sup> and affecting 95% of tested devices<sup><a href="#user-content-fn-3" id="user-content-fnref-3-4" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">4</a></sup>—demonstrate the critical need for protection solutions. Our BLE device adapter addresses this need by fundamentally eliminating the attack vector rather than attempting to defend against it.</p>
+<p><strong>Practical Significance:</strong></p>
+<p>Beyond protection from malicious attacks, our solution provides value for:</p>
+<ul>
+<li>Organizations requiring secure device connectivity</li>
+<li>Automotive systems with vulnerable infotainment ports</li>
+<li>Industrial equipment with exposed USB interfaces</li>
+<li>Educational institutions protecting shared computing resources</li>
+<li>Healthcare facilities with sensitive medical equipment</li>
+</ul>
+<p><strong>Academic Contribution:</strong></p>
+<p>This case study contributes to the body of knowledge on:</p>
+<ul>
+<li>Practical BLE implementation for security applications</li>
+<li>Comparative energy efficiency analysis of Bluetooth technologies</li>
+<li>Design Science Research application in hardware development</li>
+<li>Integration of wireless communication with existing wired device technology</li>
+</ul>
+<p>While Bluetooth Classic showed superior energy efficiency during continuous data transmission in our automotive-grade hardware, BLE&#x27;s architecture—with rapid connection establishment, efficient scanning, and optimized sleep states—proves more suitable for the intermittent communication patterns typical of USB device interactions.</p>
+<p>The project validates that wireless alternatives to USB connectivity are not only technically feasible but provide superior protection against an evolving threat landscape. As USB Killer devices become more sophisticated, with features like internal batteries enabling offline attacks and bypassing modern security protocols<sup><a href="#user-content-fn-4" id="user-content-fnref-4-2" data-footnote-ref="true" aria-describedby="footnote-label" class="footnoteRefStickyNavbar_i6ta">2</a></sup>, solutions that eliminate physical connectivity entirely become increasingly valuable.</p>
+<p><strong>Final Thoughts:</strong></p>
+<p>This three-person workshop project during school studies demonstrates that innovative security solutions can emerge from academic environments when students combine theoretical knowledge with hands-on development experience. The integration of custom soldering, BLE protocol expertise, and systematic testing methodology produced a functional prototype that addresses a real-world security challenge.</p>
+<p>As we continue to develop this technology toward commercialization, we remain committed to advancing USB security through wireless isolation, contributing to industry best practices, and sharing our findings with the broader technology community.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">References<a href="#references" class="hash-link" aria-label="Direct link to References" title="Direct link to References" translate="no">​</a></h2>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="connect-with-us">Connect With Us<a href="#connect-with-us" class="hash-link" aria-label="Direct link to Connect With Us" title="Direct link to Connect With Us" translate="no">​</a></h2>
+<p>We welcome collaboration, feedback, and discussions about this project and USB security solutions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="social-media">Social Media<a href="#social-media" class="hash-link" aria-label="Direct link to Social Media" title="Direct link to Social Media" translate="no">​</a></h3>
+<ul>
+<li><strong>LinkedIn:</strong> <a href="#">Project Team LinkedIn</a> - Professional updates and technical discussions</li>
+<li><strong>YouTube:</strong> <a href="#">Project Channel</a> - Development videos, demonstrations, and tutorials</li>
+<li><strong>Patreon:</strong> <a href="#">Support Our Research</a> - Exclusive content and early access to developments</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="contact">Contact<a href="#contact" class="hash-link" aria-label="Direct link to Contact" title="Direct link to Contact" translate="no">​</a></h3>
+<p>For academic inquiries, collaboration opportunities, or technical questions, please reach out through our social media channels or project repository.</p>
+<hr>
+<p><strong>Project Status:</strong> Active Development | <strong>Last Updated:</strong> 2025
+<strong>License:</strong> Academic Research Project | <strong>Team Size:</strong> 3 Members<br>
+<strong>Institution:</strong> Workshop-based Development During School Studies</p>
+<hr>
+<p><em>This case study documents an academic research project focused on USB security and BLE technology. All measurements and findings are based on specific hardware configurations and testing conditions as described in the technical sections.</em></p>
+<!-- -->
+<section data-footnotes="true" class="footnotes"><h2 class="anchor anchorWithStickyNavbar_LWe7 sr-only" id="footnote-label">Footnotes<a href="#footnote-label" class="hash-link" aria-label="Direct link to Footnotes" title="Direct link to Footnotes" translate="no">​</a></h2>
+<ol>
+<li id="user-content-fn-1">
+<p>Kukuruku. (n.d.). <em>USB Killer</em>. Retrieved from <a href="http://kukuruku.co/hub/diy/usb-killer" target="_blank" rel="noopener noreferrer">http://kukuruku.co/hub/diy/usb-killer</a> <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-1-2" data-footnote-backref="" aria-label="Back to reference 1-2" class="data-footnote-backref">↩<sup>2</sup></a></p>
+</li>
+<li id="user-content-fn-4">
+<p>USBKill. (n.d.). <em>USBKill V4.0</em>. Retrieved from <a href="https://www.usbkill.com/" target="_blank" rel="noopener noreferrer">https://www.usbkill.com/</a> <a href="#user-content-fnref-4" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-4-2" data-footnote-backref="" aria-label="Back to reference 2-2" class="data-footnote-backref">↩<sup>2</sup></a></p>
+</li>
+<li id="user-content-fn-2">
+<p>Cimpanu, C. (2019). <em>Former student destroys 59 university computers using USB Killer device</em>. ZDNet. Retrieved from <a href="https://www.zdnet.com/article/former-student-destroys-59-university-computers-using-usb-killer-device/" target="_blank" rel="noopener noreferrer">https://www.zdnet.com/article/former-student-destroys-59-university-computers-using-usb-killer-device/</a> <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-2-2" data-footnote-backref="" aria-label="Back to reference 3-2" class="data-footnote-backref">↩<sup>2</sup></a> <a href="#user-content-fnref-2-3" data-footnote-backref="" aria-label="Back to reference 3-3" class="data-footnote-backref">↩<sup>3</sup></a> <a href="#user-content-fnref-2-4" data-footnote-backref="" aria-label="Back to reference 3-4" class="data-footnote-backref">↩<sup>4</sup></a></p>
+</li>
+<li id="user-content-fn-3">
+<p>Hruska, J. (2016). <em>USB Killer fries devices</em>. Ars Technica. Retrieved from <a href="https://arstechnica.com/gadgets/2016/12/usb-killer-fries-devices/" target="_blank" rel="noopener noreferrer">https://arstechnica.com/gadgets/2016/12/usb-killer-fries-devices/</a> <a href="#user-content-fnref-3" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-3-2" data-footnote-backref="" aria-label="Back to reference 4-2" class="data-footnote-backref">↩<sup>2</sup></a> <a href="#user-content-fnref-3-3" data-footnote-backref="" aria-label="Back to reference 4-3" class="data-footnote-backref">↩<sup>3</sup></a> <a href="#user-content-fnref-3-4" data-footnote-backref="" aria-label="Back to reference 4-4" class="data-footnote-backref">↩<sup>4</sup></a></p>
+</li>
+<li id="user-content-fn-5">
+<p>Luks, J., &amp; Tåqvist, C. (2022). <em>Analysis of effective energy consumption of Bluetooth Low Energy versus Bluetooth Classic</em> (Bachelor&#x27;s thesis). Jönköping University, School of Engineering. Retrieved from <a href="http://hj.diva-portal.org/smash/record.jsf?pid=diva2%3A1683816&amp;dswid=1160" target="_blank" rel="noopener noreferrer">http://hj.diva-portal.org/smash/record.jsf?pid=diva2%3A1683816&amp;dswid=1160</a> <a href="#user-content-fnref-5" data-footnote-backref="" aria-label="Back to reference 5" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-5-2" data-footnote-backref="" aria-label="Back to reference 5-2" class="data-footnote-backref">↩<sup>2</sup></a> <a href="#user-content-fnref-5-3" data-footnote-backref="" aria-label="Back to reference 5-3" class="data-footnote-backref">↩<sup>3</sup></a> <a href="#user-content-fnref-5-4" data-footnote-backref="" aria-label="Back to reference 5-4" class="data-footnote-backref">↩<sup>4</sup></a> <a href="#user-content-fnref-5-5" data-footnote-backref="" aria-label="Back to reference 5-5" class="data-footnote-backref">↩<sup>5</sup></a></p>
+</li>
+<li id="user-content-fn-6">
+<p>Bluetooth SIG, Inc. (2016). <em>Core Specification 5.0</em>. Retrieved from <a href="https://www.bluetooth.com/specifications/specs/core-specification-5/" target="_blank" rel="noopener noreferrer">https://www.bluetooth.com/specifications/specs/core-specification-5/</a> <a href="#user-content-fnref-6" data-footnote-backref="" aria-label="Back to reference 6" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-6-2" data-footnote-backref="" aria-label="Back to reference 6-2" class="data-footnote-backref">↩<sup>2</sup></a> <a href="#user-content-fnref-6-3" data-footnote-backref="" aria-label="Back to reference 6-3" class="data-footnote-backref">↩<sup>3</sup></a></p>
+</li>
+</ol>
+</section></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#table-of-contents" class="table-of-contents__link toc-highlight">Table of Contents</a></li><li><a href="#executive-summary" class="table-of-contents__link toc-highlight">Executive Summary</a></li><li><a href="#background" class="table-of-contents__link toc-highlight">Background</a><ul><li><a href="#21-the-usb-killer-threat" class="table-of-contents__link toc-highlight">2.1 The USB Killer Threat</a></li><li><a href="#22-real-world-incidents" class="table-of-contents__link toc-highlight">2.2 Real-World Incidents</a></li></ul></li><li><a href="#problem-statement" class="table-of-contents__link toc-highlight">Problem Statement</a></li><li><a href="#solution-overview" class="table-of-contents__link toc-highlight">Solution Overview</a></li><li><a href="#technical-approach" class="table-of-contents__link toc-highlight">Technical Approach</a><ul><li><a href="#51-ble-vs-usb-communication" class="table-of-contents__link toc-highlight">5.1 BLE vs USB Communication</a></li><li><a href="#52-energy-efficiency-analysis" class="table-of-contents__link toc-highlight">5.2 Energy Efficiency Analysis</a></li></ul></li><li><a href="#product-features" class="table-of-contents__link toc-highlight">Product Features</a><ul><li><a href="#core-features" class="table-of-contents__link toc-highlight">Core Features</a></li><li><a href="#technical-specifications" class="table-of-contents__link toc-highlight">Technical Specifications</a></li></ul></li><li><a href="#benefits" class="table-of-contents__link toc-highlight">Benefits</a><ul><li><a href="#for-organizations" class="table-of-contents__link toc-highlight">For Organizations</a></li><li><a href="#for-end-users" class="table-of-contents__link toc-highlight">For End Users</a></li></ul></li><li><a href="#implementation" class="table-of-contents__link toc-highlight">Implementation</a><ul><li><a href="#81-project-team" class="table-of-contents__link toc-highlight">8.1 Project Team</a></li><li><a href="#82-development-environment" class="table-of-contents__link toc-highlight">8.2 Development Environment</a></li><li><a href="#83-hardware-development" class="table-of-contents__link toc-highlight">8.3 Hardware Development</a></li></ul></li><li><a href="#results" class="table-of-contents__link toc-highlight">Results</a><ul><li><a href="#performance-metrics" class="table-of-contents__link toc-highlight">Performance Metrics</a></li><li><a href="#comparison-to-baseline" class="table-of-contents__link toc-highlight">Comparison to Baseline</a></li><li><a href="#real-world-application" class="table-of-contents__link toc-highlight">Real-World Application</a></li></ul></li><li><a href="#challenges-and-learnings" class="table-of-contents__link toc-highlight">Challenges and Learnings</a><ul><li><a href="#technical-challenges" class="table-of-contents__link toc-highlight">Technical Challenges</a></li><li><a href="#development-learnings" class="table-of-contents__link toc-highlight">Development Learnings</a></li></ul></li><li><a href="#future-development" class="table-of-contents__link toc-highlight">Future Development</a><ul><li><a href="#short-term-enhancements" class="table-of-contents__link toc-highlight">Short-term Enhancements</a></li><li><a href="#long-term-vision" class="table-of-contents__link toc-highlight">Long-term Vision</a></li></ul></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li><li><a href="#references" class="table-of-contents__link toc-highlight">References</a></li><li><a href="#connect-with-us" class="table-of-contents__link toc-highlight">Connect With Us</a><ul><li><a href="#social-media" class="table-of-contents__link toc-highlight">Social Media</a></li><li><a href="#contact" class="table-of-contents__link toc-highlight">Contact</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">© 2025 Context Aware Solutions. Version: 20251012-2333 • Last build: 20251012-2333 • Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
