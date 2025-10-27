@@ -74,8 +74,8 @@ Because you can't surge what you can't reach.
 We ran the numbers. Here's what we found:
 
 → 938 kb/s practical throughput with BLE LE 2M PHY
-→ <100ms connection establishment
-→ <0.1% packet loss under normal conditions
+→ &lt;100ms connection establishment
+→ &lt;0.1% packet loss under normal conditions
 → 100% protection from electrical surges
 
 [brand name] proves that wireless doesn't mean compromise. It means evolution.
@@ -128,9 +128,9 @@ Your vehicle's electronics cost thousands. Shouldn't they be protected?
 We didn't just build [brand name] to be secure. We built it to be smart.
 
 Using BLE 5.0 technology, our adapter achieves:
-• Rapid connection/disconnection (<100ms)
+• Rapid connection/disconnection (&lt;100ms)
 • Optimized sleep states during idle
-• <1 mA current in sleep mode
+• &lt;1 mA current in sleep mode
 • Extended battery operation capability
 
 Because protection shouldn't drain your power—or your resources.

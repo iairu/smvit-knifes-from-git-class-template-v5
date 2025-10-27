@@ -154,7 +154,7 @@ While Bluetooth Classic showed better efficiency during active data transmission
 - **Current Consumption:** 
   - Active (transmitting): ~6-7 mA average
   - Idle (connected): ~34 mA average
-  - Sleep mode: <1 mA
+  - Sleep mode: &lt;1 mA
 
 ---
 
@@ -280,11 +280,11 @@ This project was developed by a three-person team during school studies in a wor
 **Data Transmission:**
 - Successfully achieved 938.3 kb/s practical throughput using LE 2M PHY
 - Stable connections maintained over 10-meter range in workshop environment
-- Packet loss rate <0.1% under normal operating conditions
+- Packet loss rate &lt;0.1% under normal operating conditions
 
 **Energy Efficiency:**
 - Average current consumption during transmission: 6.35 mA (LE 2M PHY)
-- Connection establishment time: <100ms
+- Connection establishment time: &lt;100ms
 - Total energy per 500KB transfer: ~27.4 mC
 
 **Protection Validation:**
@@ -301,7 +301,7 @@ Our measurements compared BLE performance against Bluetooth Classic (BR/EDR), re
 | Throughput | 938 kb/s | 1,047 kb/s |
 | Avg. Current (Active) | 6.35 mA | 4.90 mA |
 | Energy per 500KB | 27.4 mC | 18.9 mC |
-| Connection Setup | <100ms | >500ms |
+| Connection Setup | &lt;100ms | &rt;500ms |
 | Idle Current | 33.67 mA | 35.15 mA |
 
 **Key Finding:** While Bluetooth Classic showed better efficiency during continuous data transmission, BLE's rapid connection/disconnection capability makes it more suitable for intermittent USB device communication patterns, where devices connect, exchange data, and disconnect quickly.
