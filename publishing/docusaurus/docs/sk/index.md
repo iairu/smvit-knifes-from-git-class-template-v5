@@ -1,6 +1,4 @@
-#index.md
-
-# [brand name wip]
+# USBCAPS
 
 ---
 
