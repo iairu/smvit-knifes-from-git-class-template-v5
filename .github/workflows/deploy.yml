@@ -38,5 +38,5 @@ jobs:
           destination_dir: .
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          cname: knife.iairu.com
+          cname: knifes.usbcaps.org
 

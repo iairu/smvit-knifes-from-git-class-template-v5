@@ -13,9 +13,9 @@ const buildDate = process.env.BUILD_DATE || "20251012-2333";
 const appVersion = process.env.APP_VERSION || "20251012-2333";
 
 const config: Config = {
-  title: "KNIFE Preview - Knowledge in Friendly Examples", // ✅ povinné
+  title: "USBCAPS KNIFE Fulfillment - Knowledge in Friendly Examples", // ✅ povinné
   tagline: "Context Aware Approach",
-  url: process.env.SITE_URL || "https://knifes.systemthinking.sk", // can be overridden in CI/local
+  url: process.env.SITE_URL || "https://knifes.usbcaps.org", // can be overridden in CI/local
   baseUrl: process.env.BASE_URL || "/", // can be overridden in CI/local
   trailingSlash: false,
   favicon: "img/favicon.ico",
@@ -136,12 +136,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "https://iairu.com/_global/logo.svg",
+    image: "https://knifes.usbcaps.org/img/smvit-logo.svg",
     navbar: {
-      title: "SMVIT KNIFE Framework",
+      title: "USBCAPS KNIFE Framework",
       logo: {
         alt: "KNIFE Logo",
-        src: "https://iairu.com/_global/logo.svg",
+        src: "https://knifes.usbcaps.org/img/smvit-logo.svg",
         href: "/sk",
       },
       items: [
