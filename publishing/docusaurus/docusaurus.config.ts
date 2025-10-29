@@ -149,14 +149,29 @@ const config: Config = {
         { to: "/sk/knifes", label: "KNIFES", position: "left" },
         { to: "/sk/7ds/", label: "7DS", position: "left" },
         {
-          to: "/sk/student/deliverables/ondrej",
-          label: "STUDENT - Ondrej",
+          to: "/sk/student/deliverables/ondrej/01_about-me",
+          label: "Ondrej",
+          position: "left",
+        },
+        {
+          to: "/sk/social-media-content/case-study",
+          label: "Case Study",
+          position: "left",
+        },
+        {
+          to: "/sk/social-media-content/pomocka-transcripty",
+          label: "Transkripty",
           position: "left",
         },
         // { to: '/sk/7Ds', label: '7Ds', position: 'left' },
         {
           href: "https://github.com/KNIFE-Framework/knifes_overview",
           label: "GitHub",
+          position: "right",
+        },
+        {
+          href: "https://usbcaps.org",
+          label: "Prezentačný web",
           position: "right",
         },
       ],
