@@ -1,6 +1,6 @@
-# Vyplnené assignmenty na predmet SMVIT
+# Vyplnené assignmenty z MS Teams
 
-## Prvý
+## Prvý - Základné informácie o predmete
 
 1.Navzáklade prvých prednášok a cvičení a exkurzií napíšte svoj pohľad o čom by mal byť tento predmet
 (10 Points)
@@ -55,7 +55,7 @@ Pri aplikácii týchto princípov na reálny projekt by som pristupoval systemat
 
 ---
 
-## Druhý
+## Druhý - Postrehy získané z exkurzií
 
 1.Ktorých exkurzií ste a v rámci predmetu STHDF zúčastnili?(10 Points)
 
@@ -93,7 +93,7 @@ Pri aplikácii týchto princípov na reálny projekt by som začal s dôkladnou 
 
 ---
 
-## Tretí
+## Tretí - Príprava ekosystému (Sociálne siete)
 
 1.Vytvoril ste si organizačný účet na LinkedIN? (Ano/nie)
 (10 Points)
@@ -143,9 +143,104 @@ Pri reálnom projekte by som od začiatku integroval princípy profesionálnej o
 
 ---
 
-## Štvrtý
+## Štvrtý (Aplikácie na pracovnej stanici)
+
+Vhodné aplikácie sú základom pre úspešnú prácu. Na našom predmete mám vybranú množinu aplikácií, na ktorých sa snažíme demonštrovať prezentované princípy.
+
+Aplikácie je potrebné si nainštalovať. Konfiguráciu si prejdeme spoločne na cvičeniach, alebo podľa manuálov
+
+1.Máte zavedený pracovný zošit a používate ho? (A/N)(10 Points)
+
+Áno
+
+2.Ste si vedomý toho, že vo výstupnej prezentácií sa očakáva aspoň jeden obrázok nakreslený vašou vlastnou rukov? (10 Points)
+
+Áno
+
+3.SmartGit(10 Points)
+
+Iné (Ondrej: Dlhoročná skúsenosť s Fork GIT klientom)
+
+4.Lemontree(10 Points)
+
+Áno
+
+5.Enterprise Architect (10 Points)
+
+Áno
+
+6.Doplnky do EA, Ktoré?(10 Points)
+
+Zatial len LemonTree, related: pokúšali sme sa o registráciu Confluence účtu pre vyskúšanie Prolaborate integrácie, ale momentálne majú technické problémy
+
+7.Enterprise Architect - Máte aktivovanú školskú licenciu?(10 Points)
+
+Áno
+
+8.MS VSCode - doporučené, nie je podmienka. Mám mnohé veci pripravené pre toto IDE, inde to nemusí fungovať. (10 Points)
+ 
+Áno
+
+9.Pre Windows si prosím doinštalujte MSYS2 kvôli make. Ak neašpirujete na A,B, nemusíte sa namáhať... Mac a Linux to podporuje. Doladíme na cvičeniach (10 Points)
+ 
+Áno
+
+10.ďalšie aplikácie pore potreby generátora HTML stránok, Doladíme na cvičeniach
+
+Publikovanie cez Github pages už máme aktívne pre knifes aj prezentačnú stránku nášho tímu. Grafiku USBCAPS brandu sme spravili cez Affinity Designer.
+
+11.Čo vám toto zadanie pomohlo pochopiť o spôsobe, akým sa učíte?(10 Points)
+
+Ondrej Špánik: Toto zadanie mi pomohlo uvedomiť si, že efektívne učenie vyžaduje aktívnu prípravu pracovného prostredia a nástrojov, nie len pasívne absorbovanie informácií. Predpoklady pre prácu s Enterprise Architect z predošlých predmetov, inštalácia cez Wine pre macOS, LemonTree a rôzne aktívne nasadenia nášho tímu naznačujú, že súčasťou učebného procesu je aj prekonávanie technických prekážok a budovanie vlastného "ekosystému" pre produktívnu prácu. Naučil som sa, že učenie sa nie je lineárny proces - niekedy musím preskočiť dopredu, inokedy sa vrátiť a refaktorovať svoj prístup (ako keď som musel zmeniť framework v Launch.Rentals TP projekte). Namiesto tradičného pracovného zošita využívame KNIFEs repository a Discord server na priame zdieľanie informácií v ľahko prehľadateľnom formáte, ale určité diagramy preferujem kresliť vlastnou rukou - z vlastnej skúsenosti viem, že prepisovanie poznatkov na reálny papier ma núti reštrukturalizovať myšlienky a sformulovať zmysluplnejší dokument. Proces konfigurácie integrácie medzi EA a LemonTree ma naučil, že v reálnom IT prostredí musím byť adaptabilný - nie všetko funguje hneď, niekedy sú technické problémy mimo mojej kontroly a musím nájsť alternatívne riešenia. Uvedomil som si aj dôležitosť automatizácie - na macOS mám predpripravené prostredie publikovanie cez GitHub Pages, čo sú investície času, ktoré sa vyplácajú pri opakovaných úlohách. Z práce na dokumentačných úlohách v Innovatrics a pozície scrum mastera v Launch.Rentals TP som si overil, že konfigurácia vývojového prostredia a workflow sú kritické zručnosti.
+
+12.Ako by si použil tieto princípy pri reálnom projekte?(10 Points)
+
+Ondrej Špánik: Pri reálnom projekte by som tieto princípy aplikoval systematicky od samého začiatku, pretože správna príprava nástrojov a prostredia je základom pre efektívnu prácu. Na začiatku každého projektu proaktívne kombinujem uložené integrácie a konfigurácie zo skúsenosti pre nasadenie potrebných služieb s expertízou v grafickom dizajne - podobne ako máme v tomto predmete definovaný zoznam aplikácií. Implementoval by som verzionovanie nielen kódu (Git/GitHub), ale aj modelov a dokumentácie (LemonTree, Confluence), čo by zabezpečilo transparentnosť a možnosť rollbacku pri problémoch - táto praktika by sa mi veľmi zišla pri mojom prvom pokuse o bakalársku prácu, kde som stratil mnoho času kvôli nedostatočnému verziovaniu. Nastavil by som od začiatku automatizovaný workflow s CI/CD pipeline, generovaním dokumentácie a publikovaním cez GitHub Pages - podobne ako to máme teraz pripravené pre KNIFES framework a prezentačnú stránku nášho USBCAPS tímu. Z práce na dokumentačných úlohách v Innovatrics viem, že toto počiatočné investovanie času do automatizácie sa vyplatí pri každej ďalšej iterácii. Využil by som princíp "infrastructure as code" a dokumentoval by konfiguráciu všetkých nástrojov, aby nový člen tímu mohol reprodukovať vývojové prostredie za krátky čas - v pozícii scrum mastera v Launch.Rentals TP som pripravil práve takúto dokumentáciu, čo výrazne uľahčilo onboarding. Implementoval by som dual-track prístup - vlastnoručné náčrty diagramov pre konceptuálne myslenie (pretože prepisovanie na papier reštrukturalizuje myšlienky), digitálne nástroje pre formálnu dokumentáciu zdieľanú cez KNIFEs repository alebo Discord pre ľahké vyhľadávanie. Pri výbere nástrojov by som aplikoval princíp "choose boring technology" - radšej overené nástroje ako Enterprise Architect než experimentálne riešenia, pokiaľ to nie je explicitne výskumný projekt. Vytvoril by som štandardy a šablóny pre tímovú prácu (commit message conventions, branch naming, PR templates), ktoré by som zdokumentoval v README - podobne ako máme pripravené šablóny v git-class-template-v5 repozitári. A nakoniec by som pravidelne reflektoval efektivitu nastaveného workflow a bol otvorený adaptácii - ak by som videl, že niektorý nástroj alebo proces neprinášajú hodnotu, zmenil by som prístup, ale vždy s jasným zdôvodnením a dokumentáciou zmeny.
+
 
 ---
 
 ## Piaty
 
+1.Máte svoj GitHub účet?(10 Points)
+
+Áno
+
+2.Máte vytvorený svoj profil ako samostatný repozitár?
+(10 Points)
+
+Áno
+
+3.Máte vytvorený clon?
+ https://github.com/06-STH-Projects/git-class-template-v5.git
+ Jedná sa o pracovný repozitár, aby sme mohli vytvárať deliverables podľa pripravených šablón. Detaily prejdem na cvičeniach  Tento repozitár bude základ pre váš študentský repozitár v rámci GH triedy. Ten vznikne v najbliších dňoch. 
+(10 Points)
+
+Áno
+
+4.Máte už naklonovaný repozitár s modelom EA.?
+ https://github.com/06-STH-Projects/class_sthdf_2025_EA_repository
+ bude obsahovať QEA súbor. BUdeme ho používať pri paralelnom modelovaní s git workflow podporou. (Lemontree aplikáciou).
+ Detaily prejdeme na cvičeniach 
+(10 Points)
+
+Ešte nie
+
+5.Máte prístup do PROLABORATE a vyskúšali ste si to?(10 Points)
+
+Áno
+
+6.Tu sú ďašie repozitáre, s ktorými sa na predmete stretneme
+          https://github.com/Roman-Kazicka  https://github.com/06-STH-Projects/class_sthdf_2025_EA_repository  https://github.com/06-STH-Projects/git-class-template-v5 
+ https://github.com/06-STH-Projects/class_sthdf_2025-2026_private  https://github.com/06-STH-Projects/class_sthdf_2025-2026        
+Je to náš, privátny a public priestor pre spoluprácu. Detaily si povieme na cvičeniach.
+
+prístup k obom class_sthdf repozitárom zatiaľ nefunguje
+
+7.Čo vám toto zadanie pomohlo pochopiť o spôsobe, akým sa učíte?(10 Points)
+
+Zadanie mi ukázalo, že efektívne učenie vyžaduje systematickú organizáciu a správu zdrojov. Práca s viacerými repozitármi, verzionovacími nástrojmi a kolaboratívnymi platformami ukazuje, že moderné IT vzdelávanie je o budovaní celého ekosystému nástrojov, nie len izolovaných zručností. Uvedomil som si dôležitosť štruktúry – šablóny, workflows a štandardy uľahčujú učenie tým, že poskytujú jasný rámec. Zistil som tiež, že učenie je iteratívny proces – potrebujem sa vracať k repozitárom, aktualizovať ich a refaktorovať prístup podľa získaných skúseností.
+
+8.Ako by si použil tieto princípy pri reálnom projekte?(10 Points)
+
+Pri reálnom projekte by som od začiatku nastavil štruktúrovaný git workflow s jasne definovanými repozitármi pre kód, modely a dokumentáciu. Používal by som šablóny a štandardy pre konzistentnú prácu v tíme, implementoval verziovanie všetkých artefaktov cez Git a LemonTree, a využíval kolaboratívne nástroje ako Prolaborate pre zdieľanie modelov. Vytvoril by som centrálny repozitár s dokumentáciou a konfiguráciou pre rýchly onboarding nových členov. Pravidelne by som synchronizoval zmeny a udržiaval transparentnú históriu všetkých rozhodnutí.
