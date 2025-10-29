@@ -200,7 +200,7 @@ Ondrej Špánik: Pri reálnom projekte by som tieto princípy aplikoval systemat
 
 ---
 
-## Piaty
+## Piaty (Systémy a systémové účty)
 
 1.Máte svoj GitHub účet?(10 Points)
 
@@ -244,3 +244,45 @@ Zadanie mi ukázalo, že efektívne učenie vyžaduje systematickú organizáciu
 8.Ako by si použil tieto princípy pri reálnom projekte?(10 Points)
 
 Pri reálnom projekte by som od začiatku nastavil štruktúrovaný git workflow s jasne definovanými repozitármi pre kód, modely a dokumentáciu. Používal by som šablóny a štandardy pre konzistentnú prácu v tíme, implementoval verziovanie všetkých artefaktov cez Git a LemonTree, a využíval kolaboratívne nástroje ako Prolaborate pre zdieľanie modelov. Vytvoril by som centrálny repozitár s dokumentáciou a konfiguráciou pre rýchly onboarding nových členov. Pravidelne by som synchronizoval zmeny a udržiaval transparentnú históriu všetkých rozhodnutí.
+
+---
+
+# Šiesty (WIP) (Deliverables)
+
+Máte vypracované About Me(10 Points)
+
+Áno
+Nie
+
+2.Máš už About me  uložené vo svojom GitHub Class Repozitári?(10 Points)
+
+Áno
+Ešte Nie
+
+3.Máš About me na ročníkovom repozitári?
+
+Áno
+Ešte Nie
+
+4.Máš apoň jedno Knife - knowledge contribution vo svojom GH class repozitári?
+ Toto je pre celý semester, KNIFE sa nedá ohraničiť časom(20 Points)
+ 
+Áno
+Ešte Nie
+
+5.Máš Project Summary vo svojom triednom repozitári?(20 Points)
+
+Áno
+Ešte Nie
+
+6.Máš Project Summary v repozitári pre školský rok 2025-2026?(20 Points)
+
+Áno
+Ešte Nie
+
+7.Aké problémy ste museli riešiť a čo zostalo otvorené?(20 Points)
+
+8.Čo vám toto zadanie pomohlo pochopiť o spôsobe, akým sa učíte?(10 Points)
+
+9.Ako by si použil tieto princípy pri reálnom projekte?(10 Points)
+
