@@ -1,3 +1,7 @@
+# Vyplnené assignmenty na predmet SMVIT
+
+## Prvý
+
 1.Navzáklade prvých prednášok a cvičení a exkurzií napíšte svoj pohľad o čom by mal byť tento predmet
 (10 Points)
 
@@ -51,8 +55,7 @@ Pri aplikácii týchto princípov na reálny projekt by som pristupoval systemat
 
 ---
 
-
----
+## Druhý
 
 1.Ktorých exkurzií ste a v rámci predmetu STHDF zúčastnili?(10 Points)
 
@@ -88,8 +91,9 @@ Toto zadanie mi poskytlo hlboký vhľad do moderných metód učenia, ktoré sa 
 
 Pri aplikácii týchto princípov na reálny projekt by som začal s dôkladnou fázou explorácie a pochopenia problémového priestoru – podobne ako exkurzie do makerspaces nám umožnili pochopiť dostupné zdroje a technológie, aj v reálnom projekte by som venoval čas oboznámeniu sa s dostupnými nástrojmi, technológiami a osvedčenými postupmi v danej doméne. Implementoval by som prístup založený na experienciálnom učení – namiesto dlhého plánovania v izolácii by som čo najskôr vytvoril funkčný prototyp alebo "proof of concept", ktorý by umožnil tímu a stakeholderom fyzicky interagovať s riešením a poskytnúť konkrétnu spätnú väzbu. Aplikoval by som princíp kontinuálnej dokumentácie a zdieľania procesu – podobne ako pripravujeme multimediálne prezentácie a LinkedIn posty o našom školskom projekte, aj v reálnom projekte by som pravidelne komunikoval pokrok, výzvy a naučené lekcie transparentným spôsobom, čo buduje dôveru so stakeholdermi a vytvára príležitosti pre externú spätnú väzbu. Využil by som kolaboratívne priestory a nástroje facilitujúce tímovú kreativitu a riešenie problémov – fyzické makerspaces alebo virtuálne kolaboratívne platformy, ktoré podporujú spontánnu výmenu nápadov a iteratívny vývoj. Implementoval by som systémový prístup k učeniu v tíme – organizoval by som pravidelné "retrospektívy" alebo learning sessions, kde by tím reflektoval nielen výsledky práce, ale aj proces a spôsob, akým sa učíme a zlepšujeme. Podporoval by som multidisciplinárny prístup a integráciu rôznych perspektív – podobne ako makerspaces spájajú rôzne technológie a komunity, aj reálny projekt benefituje z rozmanitosti názorov a odborností. Konkrétne máme v pláne aplikovať tieto princípy už počas nášho semstrálneho IoT projektu, ktorý slúži ako príprava na reálne profesionálne výzvy.
 
-
 ---
+
+## Tretí
 
 1.Vytvoril ste si organizačný účet na LinkedIN? (Ano/nie)
 (10 Points)
@@ -138,3 +142,10 @@ Toto zadanie mi pomohlo pochopiť, že učenie sa v modernom vzdelávaní vyžad
 Pri reálnom projekte by som od začiatku integroval princípy profesionálnej online prezentácie a dokumentácie. Vytvoril by som organizačné účty na relevantných platformách – LinkedIn pre B2B komunikáciu a networking, YouTube pre video dokumentáciu a tutoriály, Patreon pre budovanie komunity podporovateľov. Implementoval by som stratégiu kontinuálneho content marketingu, kde by som pravidelne publikoval updates o projekte, technické insights a riešenia výziev, čím by som budoval transparentnosť a dôveryhodnosť. Využil by som tieto platformy na získavanie spätnej väzby od komunity už v raných fázach vývoja, čo by umožnilo iteratívne zlepšovanie produktu. Účty by slúžili aj ako portfolio demonštrujúce schopnosti tímu pre potenciálnych investorov, partnerov alebo zákazníkov. Aplikoval by som princíp storytellingu – namiesto suchého reportovania by som vytváral naratív o ceste projektu a ľuďoch za ním, čo vytvára emocionálne spojenie s publikom. Využil by som analytické nástroje platforiem na sledovanie engagement-u a pochopenie, aký typ obsahu rezonuje s publikom.
 
 ---
+
+## Štvrtý
+
+---
+
+## Piaty
+

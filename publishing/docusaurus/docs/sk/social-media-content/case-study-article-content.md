@@ -1,4 +1,6 @@
-# http://kukuruku.co/hub/diy/usb-killer
+# Case Study: Použitý obsah populárnych článkov z Hacker News
+
+## http://kukuruku.co/hub/diy/usb-killer
 
 USB devices are ubiquitous tools in modern technology, but not all of them are harmless. Among the most concerning developments is the “USB Killer”—a device specifically designed to damage or destroy hardware through a high-voltage electrical surge. This guide explores the mechanics of USB Killers, the risks they pose, and practical steps to safeguard your devices and sensitive data from these malicious tools.
 What Is a USB Killer?
@@ -46,7 +48,7 @@ Whether securing your devices from malicious tools or ensuring originality in yo
 
 ---
 
-# https://www.zdnet.com/article/former-student-destroys-59-university-computers-using-usb-killer-device/
+## https://www.zdnet.com/article/former-student-destroys-59-university-computers-using-usb-killer-device/
 
 An Indian national in the US has pleaded guilty this week to destroying 59 computers at the College of St. Rose, in New York, using a weaponized USB thumb drive named "USB Killer" that he purchased online.
 Security
@@ -74,7 +76,7 @@ Akuthota was arrested on February 22 and will be sentenced later this year, on A
 
 ---
 
-# https://arstechnica.com/gadgets/2016/12/usb-killer-fries-devices/
+## https://arstechnica.com/gadgets/2016/12/usb-killer-fries-devices/
 
 Last year we wrote about the “USB Killer”—a DIY USB stick that fried almost everything (laptops, smartphones, consoles, cars) that it was plugged into. Now the USB Killer has been mass produced—you can buy it online for about £50/$50. Now everyone can destroy just about every computer that has a USB port. Hooray.
 
@@ -100,7 +102,7 @@ Neither of those solutions help protect the hundreds of millions—perhaps billi
 
 ---
 
-# https://www.usbkill.com/
+## https://www.usbkill.com/
 
 
 USBKill
@@ -200,7 +202,7 @@ Tactical Kit →
 
 ---
 
-# https://www.techspot.com/news/108394-usb-killer-dead-apple-drops-firewire-support-macos.html
+## https://www.techspot.com/news/108394-usb-killer-dead-apple-drops-firewire-support-macos.html
 
 
 The "USB killer" is dead: Apple drops FireWire support in macOS 26
@@ -231,7 +233,7 @@ Apple routinely phases out older technology support in macOS, as the company isn
 
 ---
 
-# http://hj.diva-portal.org/smash/record.jsf?pid=diva2%3A1683816&dswid=1160
+## http://hj.diva-portal.org/smash/record.jsf?pid=diva2%3A1683816&dswid=1160
 
 Analysis of effective energy consumption of Bluetooth Low Energy versus Bluetooth Classic
 Tåqvist, Carl
@@ -1407,7 +1409,7 @@ Figure 32: PPK2 1M bytes sent.
 
 ---
 
-# https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/
+## https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/
 
 
 Skip to content

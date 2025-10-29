@@ -1,4 +1,6 @@
-# Case Study: USB-TTL Converter with BLE Protection & Wireless Terminal
+# Case Study
+
+## USB-TTL Converter with BLE Protection & Wireless Terminal
 
 **Tagline:** *Advanced USB-TTL serial converter with automatic detection, BLE-based protection against USB Killers, and wireless terminal capabilities*
 

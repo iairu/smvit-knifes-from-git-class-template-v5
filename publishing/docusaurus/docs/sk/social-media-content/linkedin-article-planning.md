@@ -1,4 +1,4 @@
-# LinkedIn Article Posts for USB-TTL Converter with Automatic Detection & BLE Protection
+# LinkedIn Article (Naplánované cez Buffer)
 
 ---
 

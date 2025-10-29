@@ -1,4 +1,4 @@
-# Patreon Article Posts for USB-TTL Converter with Automatic Detection & BLE Protection
+# Patreon Article Posty (Čiastočne publikované)
 
 ---
 
